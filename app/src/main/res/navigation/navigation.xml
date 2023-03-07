@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:startDestination="@id/ftAccounts">
+    <fragment
+        android:id="@+id/ftAccounts"
+        android:name="com.example.catsbankaccount.ui.bankaccounts.BankAccountsFragment"
+        android:label="@string/label_accounts"
+        tools:layout="@layout/accounts_fragment" >
+
+        <action
+            android:id="@+id/action_ftAccounts_to_ftMyAccount"
+            app:popUpTo="@+id/ft_accounts"
+            app:destination="@id/ftMyAccount" >
+
+            <argument
+                android:name="account"
+                app:argType="com.example.catsbankaccount.model.Account" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ftMyAccount"
+        android:name="com.example.catsbankaccount.ui.myaccount.MyBankAccountFragment"
+        android:label="@string/label_my_account"
+        tools:layout="@layout/myaccount_fragments" >
+
+        <argument
+            android:name="account"
+            app:argType="com.example.catsbankaccount.model.Account" />
+        <action
+            android:id="@+id/action_ft_my_account_to_ft_accounts"
+            app:destination="@id/ftAccounts"
+            app:popUpTo="@+id/ftMyAccount"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+</navigation>

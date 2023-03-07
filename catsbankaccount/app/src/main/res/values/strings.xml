@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">cats bank account</string>
+    <string name="accounts">Mes Comptes</string>
+    <string name="credit_agricole">Crédit Agricole</string>
+    <string name="other_bank">Autres Banques</string>
+    <string name="label_accounts">label_accounts</string>
+    <string name="label_my_account">label_my_account</string>
+</resources>
